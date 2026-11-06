@@ -1,0 +1,187 @@
+# Website Improvement Recommendations
+
+**Project:** InAmigos Foundation Website Audit  
+**Website:** https://inamigosfoundation.org.in/  
+**Date:** 6 November 2026
+
+## 1. Objective
+
+This document proposes practical improvements to the InAmigos Foundation website based on the findings recorded during the desktop audit and functional testing.
+
+Recommendations are prioritised according to their impact on website functionality, visitor experience, accessibility and visual consistency.
+
+## 2. Priority Classification
+
+| Priority | Meaning |
+|---|---|
+| High | Issues affecting essential website functionality or visitor communication |
+| Medium | Issues affecting navigation, usability, content access or interaction |
+| Low | Visual refinements and minor improvements |
+
+---
+
+## 3. High-Priority Recommendations
+
+### REC-001 — Restore Newsletter Subscription Functionality
+
+**Related Finding:** FUNC-001
+
+**Issue:** Newsletter submissions produce a server-side Swift_TransportException (HTTP 503) because local sendmail is disabled.
+
+**Recommended Actions:**
+- Configure a supported SMTP or email delivery service.
+- Verify that valid subscriptions are processed successfully.
+- Display a clear confirmation message after successful submission.
+- Handle server-side failures gracefully without exposing technical error details.
+- Test invalid, valid and duplicate email submissions.
+
+**Expected Outcome:** Visitors can subscribe reliably, and the foundation can collect newsletter registrations without exposing server errors.
+
+### REC-002 — Restore Contact Form Functionality
+
+**Related Finding:** FUNC-002
+
+**Issue:** Contact form submissions fail with a Swift_TransportException (HTTP 503).
+
+**Recommended Actions:**
+- Configure a reliable email delivery service.
+- Validate form fields on both the client and server sides.
+- Display clear success and failure messages.
+- Prevent technical server exceptions from being exposed to visitors.
+- Verify that submitted enquiries reach the foundation's intended email address.
+
+**Expected Outcome:** Visitors can contact the foundation reliably through its website.
+
+---
+
+## 4. Medium-Priority Recommendations
+
+### REC-003 — Fix Gallery Image Viewer
+
+**Related Finding:** FUNC-003
+
+**Issue:** The gallery lightbox opens, but the selected image does not load correctly.
+
+**Recommended Actions:**
+- Inspect image source paths and lightbox configuration.
+- Verify that image assets load correctly.
+- Implement appropriate loading and error states.
+- Ensure visitors can close the image viewer and return to the gallery.
+
+**Expected Outcome:** Visitors can open and view gallery images without encountering an indefinite loading state.
+
+### REC-004 — Correct Gallery Pagination
+
+**Related Finding:** FUNC-004
+
+**Issue:** The gallery indicates 10 entries per page but appears to display all images, and pagination controls do not behave as expected.
+
+**Recommended Actions:**
+- Review the pagination implementation.
+- Ensure the selected page displays the corresponding images.
+- Make the displayed entry count consistent with the selected page size.
+- Verify navigation between pages.
+
+**Expected Outcome:** Visitors can navigate gallery content in manageable and predictable groups.
+
+### REC-005 — Correct Social Media Destinations
+
+**Related Finding:** FUNC-005
+
+**Issue:** Several social media icons lead to generic or unexpected destinations.
+
+**Recommended Actions:**
+- Verify the foundation's official social media profile URLs.
+- Replace generic platform homepage links with verified profile destinations.
+- Investigate the Facebook destination that reports unavailable content.
+- Remove links for accounts that are no longer active or available.
+
+**Expected Outcome:** Visitors can reach the foundation's intended social media profiles.
+
+### REC-006 — Improve Homepage Action Card Affordance
+
+**Related Finding:** HOME-007
+
+**Issue:** The Donate Us, Become A Volunteer and Join Us cards do not clearly communicate that they are clickable.
+
+**Recommended Actions:**
+- Introduce recognizable button or card interaction styling.
+- Add hover and focus states.
+- Improve visual separation between the cards and surrounding content.
+- Ensure the entire intended interactive area responds consistently to clicks.
+
+**Expected Outcome:** Visitors can more easily identify and use important engagement options.
+
+### REC-007 — Improve Causes Page Content
+
+**Related Finding:** HOME-008
+
+**Issue:** The Causes page displays "NO RESULTS" with substantial unused space.
+
+**Recommended Actions:**
+- Verify whether causes are available in the website's content management system.
+- Display relevant causes with descriptions and supporting images.
+- Provide clear calls to action where appropriate.
+- If no causes are available, replace the empty result with a meaningful message and alternative navigation.
+
+**Expected Outcome:** Visitors receive useful information instead of an uninformative empty page.
+
+---
+
+## 5. Low-Priority Recommendations
+
+### REC-008 — Update Social Media Branding
+
+**Related Finding:** FUNC-006
+
+**Recommended Actions:**
+- Replace outdated Twitter branding with the appropriate current platform branding if the account is active.
+- Remove the inactive Google+ icon.
+- Maintain consistent icon sizing, spacing and visual style.
+
+**Expected Outcome:** The social media section looks current and contains relevant platforms.
+
+### REC-009 — Improve Homepage Visual Consistency
+
+**Related Findings:** HOME-002, HOME-003, HOME-004, HOME-005, HOME-006
+
+**Recommended Actions:**
+- Increase header and footer logo visibility while maintaining aspect ratio.
+- Rebalance the About section's image and text layout.
+- Standardise event card heights and align their call-to-action buttons.
+- Establish a consistent colour palette with clearly defined primary, secondary and accent colours.
+- Verify colour contrast against WCAG 2.2 AA requirements.
+
+**Expected Outcome:** The homepage presents a more cohesive visual identity, improved content hierarchy and consistent layout.
+
+---
+
+## 6. Additional Usability Improvements
+
+The following observations are documented in the functional testing log. They are opportunities for improvement rather than confirmed functional defects.
+
+| Test ID | Observation | Recommendation |
+|---|---|---|
+| TEST-009 | Event links open in the current tab | Consider whether opening external event destinations in a new tab would improve browsing continuity. |
+| TEST-011 | Volunteers pagination produces an uneven final row | Review card-grid alignment and spacing across pagination pages. |
+| TEST-013 | Footer links open in the current tab | Consider new-tab behaviour for selected external links where appropriate. |
+| TEST-014 | Blog Read More links open in the current tab | Consider new-tab behaviour where it improves browsing continuity. |
+
+Internal links should generally retain conventional same-tab navigation unless there is a specific usability reason to do otherwise.
+
+---
+
+## 7. Recommended Implementation Order
+
+| Order | Recommendation | Priority |
+|---|---|---|
+| 1 | Restore contact form functionality | High |
+| 2 | Restore newsletter subscription functionality | High |
+| 3 | Fix gallery image viewer | Medium |
+| 4 | Correct gallery pagination | Medium |
+| 5 | Correct social media destinations | Medium |
+| 6 | Improve homepage action card affordance | Medium |
+| 7 | Improve Causes page content | Medium |
+| 8 | Update social media branding | Low |
+| 9 | Improve homepage visual consistency | Low |
+
