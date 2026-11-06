@@ -157,3 +157,19 @@ Finding documented. Corresponding documentation and evidence changes are awaitin
 - Update recommendations as the audit progresses.
 - Prepare the final report after the audit is complete.
 - Complete the required Drive and internship submission steps.
+## 06 November 2026 — About Us Page Audit
+
+### Completed
+- Inspected the About Us page layout and content.
+- Tested breadcrumb navigation.
+- Confirmed the Home breadcrumb link navigates correctly.
+- Identified the incorrect current-page breadcrumb label: "Page" instead of "About Us".
+- Recorded `TEST-017` in `analysis/functionalTesting.md`.
+- Added `ABOUT-001` to `analysis/findings.md`.
+- Captured original and annotated screenshot evidence.
+
+### Key Finding
+The About Us breadcrumb displays "Home / Page" instead of "Home / About Us".
+
+### Status
+Finding documented and evidence captured. No implementation undertaken.

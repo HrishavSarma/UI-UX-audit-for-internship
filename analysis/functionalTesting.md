@@ -191,3 +191,13 @@ The following observations were recorded during manual desktop inspection and in
 - **Status:** FAIL
 - **Evidence:** `../screenshot/original/categories-fullpage-overview.png`
 - **Annotated Evidence:** `../screenshot/annotated/categories-fullpage-overview-annotated.png`
+
+### TEST-017 — Incorrect About Page Breadcrumb Label
+
+- **Page:** About Us
+- **Category:** Navigation / User Experience
+- **Expected:** Breadcrumb should identify the current page as "About Us".
+- **Actual:** Breadcrumb displays "Home / Page". Only "Home" is clickable and navigates to the homepage.
+- **Status:** Improvement Required
+- **Evidence:** `../screenshot/original/aboutUs-fullpage-overview.png`
+- **Annotated Evidence:** `../screenshot/annotated/aboutUs-breadcrumb-heading-mismatch.png`

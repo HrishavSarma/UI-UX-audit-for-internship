@@ -221,3 +221,17 @@
 - **Recommendation:** Make the entire category card a clickable target.
 - **Proposed solution:** Extend the anchor element to wrap the complete card, including its image and text, while preserving appropriate keyboard accessibility and focus styling.
 - **Status:** Verified
+
+### ABOUT-001 - Incorrect About Page Breadcrumb Label
+
+- **Page:** About Us
+- **Category:** Navigation / User Experience
+- **Severity:** Low
+- **Original Evidence:** `../screenshot/original/aboutUs-fullpage-overview.png`
+- **Annotated Evidence:** `../screenshot/annotated/aboutUs-breadcrumb-heading-mismatch.png`
+- **Observation:** The breadcrumb displays "Home / Page" instead of identifying the current page as "About Us". The Home link works correctly.
+- **User impact:** Visitors may receive unclear page-location information when using the breadcrumb navigation.
+- **Recommendation:** Display the correct current-page title in the breadcrumb.
+- **Proposed solution:** Update the breadcrumb label dynamically or configure the About page breadcrumb to display "About Us".
+- **Status:** Verified
+
