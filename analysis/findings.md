@@ -208,3 +208,16 @@
 - **Recommendation:** Update the social media icon set to reflect the foundation's currently active platforms.
 - **Proposed solution:** Replace the outdated Twitter branding where appropriate, remove the inactive Google+ icon and retain only verified, relevant social links.
 - **Status:** Verified
+
+### FUNC-007 - Restricted Clickable Area on Category Cards
+
+- **Page:** Categories
+- **Category:** Functionality / User Experience
+- **Severity:** Medium
+- **Original Evidence:** `../screenshot/original/categories-fullpage-overview.png`
+- **Annotated Evidence:** `../screenshot/annotated/categories-fullpage-overview-annotated.png`
+- **Observation:** Category cards visually appear to be fully interactive, but navigation is triggered only when clicking directly on the category text. Clicking the surrounding card area does not activate the link.
+- **User impact:** Visitors may assume the cards are unresponsive, causing confusion and making category navigation less intuitive.
+- **Recommendation:** Make the entire category card a clickable target.
+- **Proposed solution:** Extend the anchor element to wrap the complete card, including its image and text, while preserving appropriate keyboard accessibility and focus styling.
+- **Status:** Verified

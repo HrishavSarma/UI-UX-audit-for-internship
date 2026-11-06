@@ -181,3 +181,13 @@ The following observations were recorded during manual desktop inspection and in
 - **Status:** FAIL
 - **Evidence:** `../screenshot/original/contact-submitButton-error.png`
 - **Supporting Page Evidence:** `../screenshot/original/contact-fullpage-overview.png`
+
+### TEST-016 — Restricted Clickable Area on Category Cards
+
+- **Page:** Categories
+- **Category:** Functionality / User Experience
+- **Expected:** Clicking anywhere within a category card should navigate to the corresponding category.
+- **Actual:** Navigation works only when clicking directly on the category text. Clicking the surrounding card area does nothing.
+- **Status:** FAIL
+- **Evidence:** `../screenshot/original/categories-fullpage-overview.png`
+- **Annotated Evidence:** `../screenshot/annotated/categories-fullpage-overview-annotated.png`
