@@ -52,7 +52,37 @@ Recommendations are prioritised according to their impact on website functionali
 
 **Expected Outcome:** Visitors can contact the foundation reliably through its website.
 
+### REC-010 — Restore Password Reset Functionality
+
+**Related Finding:** BLOG-001
+
+**Issue:** Password reset submissions fail with a Swift_TransportException (HTTP 503).
+
+**Recommended Actions:**
+- Configure a supported SMTP or email delivery service.
+- Verify that reset emails reach registered users.
+- Ensure reset links are valid and expire appropriately.
+- Display clear confirmation and failure messages.
+- Avoid exposing technical server exceptions to visitors.
+
+**Expected Outcome:** Users can reliably recover access to their accounts.
+
 ---
+
+### REC-014 — Secure Account Password Changes
+
+**Related Finding:** SEC-001
+
+**Issue:** Authenticated users can change their passwords without verifying their existing password.
+
+**Recommended Actions:**
+- Require current-password verification before password changes.
+- Perform verification on the server.
+- Consider recent reauthentication for sensitive account operations.
+- Invalidate or review existing sessions after credential changes.
+- Display appropriate confirmation and error messages.
+
+**Expected Outcome:** Unauthorized password changes through unattended authenticated sessions are made more difficult.
 
 ## 4. Medium-Priority Recommendations
 
@@ -126,6 +156,34 @@ Recommendations are prioritised according to their impact on website functionali
 
 **Expected Outcome:** Visitors receive useful information instead of an uninformative empty page.
 
+### REC-011 — Correct Individual Blog Tag URLs
+
+**Related Finding:** BLOG-003
+
+**Issue:** Some individual blog tag links contain an unwanted leading hyphen, resulting in empty search results.
+
+**Recommended Actions:**
+- Review how tag slugs are generated.
+- Remove unintended leading characters from tag URLs.
+- Verify that generated URLs match registered tag slugs.
+- Test all individual tag links across multiple articles.
+
+**Expected Outcome:** Visitors can access relevant articles through valid individual tag links.
+
+### REC-012 — Correct Project Vikas Tag Link Structure
+
+**Related Finding:** BLOG-004
+
+**Issue:** The entire Project Vikas tag section is one link containing multiple hashtags, leading to a 404 error.
+
+**Recommended Actions:**
+- Render each tag as an independent link.
+- Generate a valid URL for each tag.
+- Ensure the clickable area corresponds to the individual tag.
+- Test each tag separately.
+
+**Expected Outcome:** Visitors can navigate to relevant content through individual Project Vikas tags.
+
 ---
 
 ## 5. Low-Priority Recommendations
@@ -154,6 +212,18 @@ Recommendations are prioritised according to their impact on website functionali
 
 **Expected Outcome:** The homepage presents a more cohesive visual identity, improved content hierarchy and consistent layout.
 
+### REC-013 — Standardize Blog Post Tag Presentation
+
+**Related Finding:** BLOG-002
+
+**Recommended Actions:**
+- Use a consistent tag layout across all blog articles.
+- Standardize tag spacing, backgrounds and typography.
+- Make individual tags consistently identifiable as links.
+- Hide the Post Tags section when no tags are assigned.
+
+**Expected Outcome:** Blog articles have a consistent tag presentation and avoid displaying empty tag sections.
+
 ---
 
 ## 6. Additional Usability Improvements
@@ -175,13 +245,18 @@ Internal links should generally retain conventional same-tab navigation unless t
 
 | Order | Recommendation | Priority |
 |---|---|---|
-| 1 | Restore contact form functionality | High |
-| 2 | Restore newsletter subscription functionality | High |
-| 3 | Fix gallery image viewer | Medium |
-| 4 | Correct gallery pagination | Medium |
-| 5 | Correct social media destinations | Medium |
-| 6 | Improve homepage action card affordance | Medium |
-| 7 | Improve Causes page content | Medium |
-| 8 | Update social media branding | Low |
-| 9 | Improve homepage visual consistency | Low |
+| 1 | Restore contact form functionality (REC-002) | High |
+| 2 | Restore newsletter subscription functionality (REC-001) | High |
+| 3 | Restore password reset functionality (REC-010) | High |
+| 4 | Secure account password changes (REC-014) | High |
+| 5 | Fix gallery image viewer (REC-003) | Medium |
+| 6 | Correct gallery pagination (REC-004) | Medium |
+| 7 | Correct social media destinations (REC-005) | Medium |
+| 8 | Improve homepage action card affordance (REC-006) | Medium |
+| 9 | Improve Causes page content (REC-007) | Medium |
+| 10 | Correct individual blog tag URLs (REC-011) | Medium |
+| 11 | Correct Project Vikas tag link structure (REC-012) | Medium |
+| 12 | Update social media branding (REC-008) | Low |
+| 13 | Improve homepage visual consistency (REC-009) | Low |
+| 14 | Standardize blog post tag presentation (REC-013) | Low |
 

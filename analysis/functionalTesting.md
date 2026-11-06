@@ -201,3 +201,90 @@ The following observations were recorded during manual desktop inspection and in
 - **Status:** Improvement Required
 - **Evidence:** `../screenshot/original/aboutUs-fullpage-overview.png`
 - **Annotated Evidence:** `../screenshot/annotated/aboutUs-breadcrumb-heading-mismatch.png`
+
+---
+
+## Blog Page Testing
+
+### TEST-018 — Blog Login Functionality
+
+- **Page:** Blog / Login
+- **Category:** Functionality / Authentication
+- **Expected:** Registered users should be able to access the login page and authenticate.
+- **Actual:** Login page opens and the login process works with registered accounts.
+- **Status:** PASS
+- **Evidence:** `../screenshot/original/login-fullpage-overview.png`
+
+### TEST-019 — Blog User Registration
+
+- **Page:** Blog / Registration
+- **Category:** Functionality / Authentication
+- **Expected:** Visitors should be able to access the registration page and register an account.
+- **Actual:** Registration page opens and registered accounts can be created.
+- **Status:** PASS
+- **Evidence:** `../screenshot/original/register-fullpage-overview.png`
+
+### TEST-020 — Password Reset Email Failure
+
+- **Page:** Blog / Forgot Password
+- **Category:** Functionality / Authentication / Backend
+- **Expected:** Submitting a registered email address should send a password reset link.
+- **Actual:** Submission produces a Swift_TransportException with HTTP 503. The server reports that local sendmail is disabled.
+- **Status:** FAIL
+- **Evidence:** `../screenshot/original/forgotPassword-page.png`
+- **Error Evidence:** `../screenshot/original/resetPassword-error.png`
+
+### TEST-021 — Blog Article Navigation
+
+- **Page:** Blog
+- **Category:** Navigation / Functionality
+- **Expected:** Each Read More button should open its corresponding article.
+- **Actual:** All tested Read More buttons successfully open their respective articles in the current tab.
+- **Status:** PASS
+- **Evidence:** `../screenshot/original/blog-fullpage-overview.png`
+- **Supporting Evidence:** `../screenshot/original/single-blog-fullpage.png`
+
+### TEST-022 — Blog Category Filtering
+
+- **Page:** Individual Blog Article
+- **Category:** Navigation / Functionality
+- **Expected:** Selecting a category should display relevant blog content.
+- **Actual:** Selecting a category successfully opens the corresponding filtered results.
+- **Status:** PASS
+
+### TEST-023 — Individual Blog Tag URL Generation
+
+- **Page:** Individual Blog Articles
+- **Category:** Navigation / Functionality
+- **Expected:** Each tag should link to a valid results page using its correct tag slug.
+- **Actual:** Some tag links generate URLs with an unwanted leading hyphen. For example, `-sustainability` and `-climate-action` return no results, whereas the corresponding clean slugs work.
+- **Status:** FAIL
+- **Evidence:** `../screenshot/original/-sustainability-tag.png`, `../screenshot/original/sustainability-tag.png`, `../screenshot/original/-climate-action-tag.png`, `../screenshot/original/climate-tag.png`
+
+### TEST-024 — Project Vikas Tag Link Structure
+
+- **Page:** Project Vikas Blog Article
+- **Category:** Navigation / Functionality
+- **Expected:** Each post tag should have an individual link leading to its corresponding tag results.
+- **Actual:** The entire tag section behaves as one clickable link. Its URL combines all hashtags into a single malformed URL, and the destination returns a 404 error.
+- **Status:** FAIL
+- **Evidence:** `../screenshot/original/projectVikas-tags.png`, `../screenshot/original/projectVikas-tags-error404.png`
+
+### TEST-025 — Inconsistent Blog Post Tag Presentation
+
+- **Page:** Individual Blog Articles
+- **Category:** Visual Design / Consistency
+- **Expected:** Post tags should follow a consistent visual presentation and interaction pattern across articles.
+- **Actual:** Project Vikas displays tags together in one container, other posts display individual tag boxes, and Animal Protection displays an empty Post Tags section.
+- **Status:** Improvement Required
+- **Evidence:** `../screenshot/original/projectVikas-tags.png`, `../screenshot/original/MissionLife-tags.png`, `../screenshot/original/Animal Protection-tag.png`
+- **Annotated Evidence:** `../screenshot/annotated/projectVikas-tags-annotated.png`, `../screenshot/annotated/MissionLife-tags-annotated.png`, `../screenshot/annotated/Animal Protection-tag-annotated.png`
+
+### TEST-026 — Password Change Without Current-Password Verification
+
+- **Page:** My Profile / Edit Profile
+- **Category:** Security / Authentication
+- **Expected:** Changing an account password should require verification of the current password or equivalent recent reauthentication.
+- **Actual:** The password was successfully changed without entering the current password. After logging out, the old password no longer worked, while the new password successfully authenticated the account.
+- **Status:** FAIL
+- **Evidence:** `../screenshot/original/myProfile-fullpage-overview.png`

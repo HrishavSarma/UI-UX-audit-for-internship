@@ -142,7 +142,7 @@ Category cards visually suggest that the entire card is interactive, but the act
 Extend the clickable anchor area to cover the entire category card, including its image and text, while preserving keyboard accessibility and focus styling.
 
 ### Status
-Finding documented. Corresponding documentation and evidence changes are awaiting commit and push.
+Finding documented, evidence captured, committed and pushed.
 
 ---
 
@@ -172,4 +172,61 @@ Finding documented. Corresponding documentation and evidence changes are awaitin
 The About Us breadcrumb displays "Home / Page" instead of "Home / About Us".
 
 ### Status
-Finding documented and evidence captured. No implementation undertaken.
+Finding documented, evidence captured, committed and pushed.
+
+---
+
+## 06 November 2026 — Blog Page Audit
+
+### Completed
+- Inspected the Blog listing and individual article pages.
+- Tested login and registration functionality.
+- Tested password recovery and identified a server-side email delivery failure.
+- Verified that all tested Read More links open their corresponding articles.
+- Confirmed that category filtering works.
+- Identified incorrect leading-hyphen slugs on some individual tag links.
+- Identified a malformed combined tag link on the Project Vikas article that leads to a 404 error.
+- Compared tag presentation across Project Vikas, Mission Life and Animal Protection articles.
+- Captured original and annotated screenshot evidence.
+- Recorded Blog functional tests (`TEST-018` to `TEST-025`).
+- Added four Blog findings (`BLOG-001` to `BLOG-004`).
+- Added recommendations for password recovery, tag navigation and tag presentation.
+
+### Key Findings
+- Password reset submissions fail with a server-side HTTP 503 email delivery error.
+- Some individual tag URLs contain an unwanted leading hyphen.
+- Project Vikas uses one malformed link for its entire tag section.
+- Blog post tag presentation is inconsistent.
+
+### Important Decisions
+- Blog pagination was not recorded as a defect because the listing displays 10 entries with 10 entries per page. No additional entries were established.
+- Category filtering and article navigation were verified as working.
+- Mobile and tablet responsiveness will be assessed during the dedicated responsive audit.
+- Tag URL generation problems were documented separately from visual tag presentation.
+
+### Status
+Blog audit documented. Evidence captured. No website implementation undertaken.
+
+---
+
+## 06 November 2026 — Account Security Testing
+
+### Completed
+- Inspected the My Profile password-change functionality.
+- Tested changing the account password without entering the current password.
+- Confirmed the password update succeeded.
+- Verified that the old password stopped working after the change.
+- Verified that the new password successfully authenticated the account.
+- Captured and sanitized screenshot evidence.
+- Recorded `TEST-026` in `analysis/functionalTesting.md`.
+- Added `SEC-001` to `analysis/findings.md`.
+- Added `REC-014` to `analysis/recommendations.md`.
+
+### Key Finding
+The account password can be changed without current-password verification.
+
+### Recommendation
+Require server-side current-password verification or equivalent recent reauthentication before processing password changes.
+
+### Status
+Security weakness verified and documented. No implementation undertaken.

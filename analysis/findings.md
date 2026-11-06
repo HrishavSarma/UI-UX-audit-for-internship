@@ -235,3 +235,81 @@
 - **Proposed solution:** Update the breadcrumb label dynamically or configure the About page breadcrumb to display "About Us".
 - **Status:** Verified
 
+---
+
+### BLOG-001 - Password Reset Email Failure
+
+- **Page:** Blog / Forgot Password
+- **Category:** Functionality / Authentication / Backend
+- **Severity:** High
+- **Original Evidence:** `../screenshot/original/forgotPassword-page.png`
+- **Error Evidence:** `../screenshot/original/resetPassword-error.png`
+- **Observation:** Submitting a registered email address through the password reset form produces a Swift_TransportException with HTTP 503. The server reports that local sendmail is disabled.
+- **User impact:** Users who forget their passwords may be unable to recover access to their accounts.
+- **Recommendation:** Restore reliable password reset email delivery.
+- **Proposed solution:** Configure a supported SMTP or email delivery service, implement appropriate error handling and verify that reset links reach registered users.
+- **Status:** Verified
+
+### BLOG-002 - Inconsistent Blog Post Tag Presentation
+
+- **Page:** Individual Blog Articles
+- **Category:** Visual Design / Consistency
+- **Severity:** Low
+- **Original Evidence:**
+  - `../screenshot/original/projectVikas-tags.png`
+  - `../screenshot/original/MissionLife-tags.png`
+  - `../screenshot/original/Animal Protection-tag.png`
+- **Annotated Evidence:**
+  - `../screenshot/annotated/projectVikas-tags-annotated.png`
+  - `../screenshot/annotated/MissionLife-tags-annotated.png`
+  - `../screenshot/annotated/Animal Protection-tag-annotated.png`
+- **Observation:** Blog post tags are presented inconsistently. Project Vikas displays tags together in one container, other posts display individual tag boxes, and Animal Protection has an empty Post Tags section.
+- **User impact:** Inconsistent tag presentation reduces visual consistency across article pages and may leave visitors uncertain about the purpose of the empty section.
+- **Recommendation:** Standardize tag presentation across all blog articles and avoid displaying empty tag sections.
+- **Proposed solution:** Use a consistent tag component and individual tag elements. Hide the Post Tags section when no tags are assigned.
+- **Status:** Verified
+
+### BLOG-003 - Incorrect Individual Blog Tag URL Generation
+
+- **Page:** Individual Blog Articles
+- **Category:** Navigation / Functionality
+- **Severity:** Medium
+- **Original Evidence:**
+  - `../screenshot/original/-sustainability-tag.png`
+  - `../screenshot/original/sustainability-tag.png`
+  - `../screenshot/original/-climate-action-tag.png`
+  - `../screenshot/original/climate-tag.png`
+- **Observation:** Some individual tag links generate URLs with an unwanted leading hyphen. For example, the `-sustainability` and `-climate-action` URLs return no results, while the corresponding clean tag slugs work.
+- **User impact:** Visitors may be unable to access relevant articles through affected tag links.
+- **Recommendation:** Correct the generation of individual tag URLs.
+- **Proposed solution:** Review tag slug generation and ensure each tag link uses the correct registered slug without unintended characters.
+- **Status:** Verified
+
+### BLOG-004 - Malformed Tag Link on Project Vikas Article
+
+- **Page:** Project Vikas Blog Article
+- **Category:** Navigation / Functionality
+- **Severity:** Medium
+- **Original Evidence:**
+  - `../screenshot/original/projectVikas-tags.png`
+  - `../screenshot/original/projectVikas-tags-error404.png`
+- **Annotated Evidence:** `../screenshot/annotated/projectVikas-tags-annotated.png`
+- **Observation:** The entire Project Vikas tag section behaves as one clickable link. The generated URL combines all hashtags into one malformed URL, and clicking the section leads to a 404 error.
+- **User impact:** Visitors cannot use the Project Vikas tags to discover related articles.
+- **Recommendation:** Render each tag as a separate functional link.
+- **Proposed solution:** Correct the tag markup and URL generation so that each tag has its own anchor element and valid destination.
+- **Status:** Verified
+
+---
+
+### SEC-001 - Password Change Without Current-Password Verification
+
+- **Page:** My Profile / Edit Profile
+- **Category:** Security / Authentication
+- **Severity:** High
+- **Original Evidence:** `../screenshot/original/myProfile-fullpage-overview.png`
+- **Observation:** An authenticated user can change their account password without supplying the existing password or completing an equivalent reauthentication check.
+- **User impact:** Someone with access to an unattended authenticated session could change the account password and prevent the legitimate account owner from logging in.
+- **Recommendation:** Require current-password verification or recent reauthentication before allowing password changes.
+- **Proposed solution:** Implement server-side current-password verification before processing password updates. Ensure the verification cannot be bypassed by directly submitting a request.
+- **Status:** Verified
