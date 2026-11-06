@@ -302,6 +302,18 @@
 
 ---
 
+### AUTH-001 — Poor Discoverability of Login and Account Access
+
+- **Page:** Sitewide Navigation / Blog
+- **Category:** Navigation / User Experience
+- **Severity:** Medium
+- **Original Evidence:** `../screenshot/original/logged-blog.png`
+- **Observation:** The website does not provide an obvious Login or Register entry point in its primary navigation. During testing, the login page was located by opening the Blog, selecting an individual article, scrolling to the comment section and clicking the `LOGGED` hyperlink in the message, "You must be LOGGED in to post a comment." The Register and Forgot Password pages were accessible from the login page.
+- **User impact:** New and returning visitors may struggle to locate account access options. Visitors who want to log in or register may not discover these functions unless they navigate through an individual blog article's comment section.
+- **Recommendation:** Provide a clearly visible and consistently accessible entry point for account access.
+- **Proposed solution:** Add Login and Register links to the main navigation or a clearly identifiable account menu. Ensure that the login page provides accessible links to registration and password recovery.
+- **Status:** Verified through manual navigation testing.
+
 ### SEC-001 - Password Change Without Current-Password Verification
 
 - **Page:** My Profile / Edit Profile

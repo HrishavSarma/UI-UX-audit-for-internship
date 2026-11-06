@@ -301,3 +301,15 @@ The following observations were recorded during manual desktop inspection and in
 - **Actual:** At 375px and 768px viewport widths, the page can be manually scrolled horizontally towards the left while the hero section is visible, exposing a blank white area. The layout returns to its normal alignment when the "Get to Know Us Better" section begins. The 430px viewport was also inspected, but the issue was not separately confirmed.
 - **Status:** FAIL
 - **Evidence:** Manual responsive inspection; no screenshot captured.
+
+## Account Access and Navigation Testing
+
+### TEST-028 — Login Page Discoverability
+
+- **Page:** Blog / Login / Registration
+- **Category:** Navigation / User Experience / Authentication
+- **Expected:** Visitors should be able to locate Login and Register through an obvious and accessible navigation entry point.
+- **Actual:** No obvious Login or Register option was identified in the primary navigation. The login page was located by navigating to Blog → Individual Article → Comment Section → `LOGGED IN` hyperlink. Register and Forgot Password were accessible from the login page.
+- **Status:** Improvement Required
+- **Evidence:** `../screenshot/original/logged-blog.png`
+- **Related Finding:** AUTH-001

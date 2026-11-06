@@ -248,3 +248,11 @@ Record:
 - Verified contrast ratio of approximately 2.11:1.
 - Confirmed failure against WCAG 2.1 Level AA requirements.
 - Updated HOME-001 from pending verification to verified.
+
+### 07 November 2026 — Account Access Discoverability Audit
+
+- Identified and documented the lack of an obvious Login / Register entry point in the primary navigation.
+- Traced the login discovery path through Blog → Individual Article → Comment Section → `LOGGED IN`.
+- Confirmed that Register and Forgot Password are accessible from the login page.
+- Added finding AUTH-001, test TEST-028 and recommendation REC-016.
+- Updated the audit totals and final report.

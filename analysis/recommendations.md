@@ -185,6 +185,22 @@ Recommendations are prioritised according to their impact on website functionali
 **Expected Outcome:** Visitors can navigate to relevant content through individual Project Vikas tags.
 
 ---
+
+### REC-016 — Improve Login and Account Access Discoverability
+
+**Related Finding:** AUTH-001
+
+**Issue:** Visitors cannot easily locate the login and registration pages through the primary navigation. The login page was discovered through an individual blog article's comment section.
+
+**Recommended Actions:**
+- Add a clearly visible Login link to the main navigation or an account menu.
+- Provide a Register link alongside the login option.
+- Ensure the login page provides an accessible Forgot Password link.
+- Maintain consistent access to account-related pages across the website.
+- Verify that all account links work correctly on desktop and mobile layouts.
+
+**Expected Outcome:** Visitors can easily discover and access login, registration and password recovery without navigating through an individual blog article.
+
 ### REC-015 — Fix Responsive Homepage Horizontal Overflow
 
 **Related Finding:** RESP-001
@@ -271,7 +287,8 @@ Internal links should generally retain conventional same-tab navigation unless t
 | 9 | Improve Causes page content (REC-007) | Medium |
 | 10 | Correct individual blog tag URLs (REC-011) | Medium |
 | 11 | Correct Project Vikas tag link structure (REC-012) | Medium |
-| 12 | Fix responsive homepage horizontal overflow (REC-015) | Medium |
-| 13 | Update social media branding (REC-008) | Low |
-| 14 | Improve homepage visual consistency (REC-009) | Low |
-| 15 | Standardize blog post tag presentation (REC-013) | Low |
+| 12 | Improve Login and Account Access Discoverability (REC-016) | Medium |
+| 13 | Fix responsive homepage horizontal overflow (REC-015) | Medium |
+| 14 | Update social media branding (REC-008) | Low |
+| 15 | Improve homepage visual consistency (REC-009) | Low |
+| 16 | Standardize blog post tag presentation (REC-013) | Low |
