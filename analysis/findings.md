@@ -35,14 +35,14 @@
 
 - **Page:** Homepage
 - **Category:** Visual Design / Accessibility
-- **Severity:** High (WCAG AA contrast failure, pending verification against live CSS)
-- **Contrast:** Approximately 2.11:1 (sampled from screenshot)
+- **Severity:** High (confirmed WCAG 2.1 Level AA contrast failure)
+- **Contrast:** 2.11:1 (calculated from CSS colour values)
 - **Original Evidence:** `../screenshot/original/header-announcement-bar.png`
-- **Observation:** The white announcement text is displayed against a highly saturated green background. The colour combination may not provide sufficient contrast for comfortable reading.
+- **Observation:** The white announcement text (#FFFFFF) is displayed against a green background (#00CC83). The calculated contrast ratio is approximately 2.11:1, which fails WCAG 2.1 Level AA requirements for normal text (minimum 4.5:1).
 - **User impact:** Visitors with low vision or reduced contrast sensitivity may find the information difficult to read.
-- **Recommendation:** Verify the foreground/background contrast ratio against WCAG 2.2 AA requirements.
+- **Recommendation:** Increase the text/background contrast ratio to at least 4.5:1 for normal text to meet WCAG 2.1 Level AA.
 - **Proposed solution:** Consider a darker green background or an alternative text colour that meets the required contrast ratio.
-- **Status:** Identified
+- **Status:** Verified against downloaded homepage HTML and CSS.
 
 ### HOME-002 - Undersized Header Logo
 

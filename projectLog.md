@@ -240,3 +240,11 @@ Record:
 - RESP-001 and TEST-027 documented.
 - No screenshot evidence captured for this phase.
 - No website implementation undertaken.
+
+### 07 November 2026 — Announcement Bar Contrast Verification
+
+- Inspected homepage inline CSS and external stylesheet.
+- Confirmed text colour (#FFFFFF) and background colour (#00CC83).
+- Verified contrast ratio of approximately 2.11:1.
+- Confirmed failure against WCAG 2.1 Level AA requirements.
+- Updated HOME-001 from pending verification to verified.
