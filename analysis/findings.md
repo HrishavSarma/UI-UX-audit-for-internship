@@ -313,3 +313,17 @@
 - **Recommendation:** Require current-password verification or recent reauthentication before allowing password changes.
 - **Proposed solution:** Implement server-side current-password verification before processing password updates. Ensure the verification cannot be bypassed by directly submitting a request.
 - **Status:** Verified
+
+---
+
+### RESP-001 — Horizontal Overflow in Homepage Hero Section
+
+- **Page:** Homepage
+- **Category:** Responsive Design / Layout
+- **Severity:** Medium
+- **Affected Viewports:** 375px and 768px (confirmed); 430px inspected, but the issue was not separately confirmed.
+- **Observation:** The homepage can be manually scrolled horizontally towards the left while the hero section is visible, exposing a blank white area. The page cannot be manually scrolled back towards the right. It automatically returns to its normal alignment when the "Get to Know Us Better" section begins.
+- **User Impact:** Unexpected horizontal movement disrupts the browsing experience and exposes blank space beside the page content.
+- **Recommendation:** Identify and correct the element causing horizontal overflow in the hero section.
+- **Proposed Solution:** Inspect the hero container, slider dimensions, image sizing, positioning and overflow rules at responsive breakpoints.
+- **Status:** Verified through manual responsive testing.

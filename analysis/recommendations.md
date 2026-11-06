@@ -185,6 +185,21 @@ Recommendations are prioritised according to their impact on website functionali
 **Expected Outcome:** Visitors can navigate to relevant content through individual Project Vikas tags.
 
 ---
+### REC-015 — Fix Responsive Homepage Horizontal Overflow
+
+**Related Finding:** RESP-001
+
+**Issue:** The homepage exhibits horizontal overflow around the hero section at mobile and tablet viewport widths.
+
+**Recommended Actions:**
+- Inspect the hero section and carousel container dimensions.
+- Identify elements extending beyond the viewport.
+- Review image sizing, positioning and responsive width rules.
+- Correct overflow without hiding legitimate content.
+- Verify the layout at mobile, tablet and desktop breakpoints.
+
+**Expected Outcome:** The homepage remains aligned within the viewport without unintended horizontal scrolling.
+
 
 ## 5. Low-Priority Recommendations
 
@@ -256,7 +271,7 @@ Internal links should generally retain conventional same-tab navigation unless t
 | 9 | Improve Causes page content (REC-007) | Medium |
 | 10 | Correct individual blog tag URLs (REC-011) | Medium |
 | 11 | Correct Project Vikas tag link structure (REC-012) | Medium |
-| 12 | Update social media branding (REC-008) | Low |
-| 13 | Improve homepage visual consistency (REC-009) | Low |
-| 14 | Standardize blog post tag presentation (REC-013) | Low |
-
+| 12 | Fix responsive homepage horizontal overflow (REC-015) | Medium |
+| 13 | Update social media branding (REC-008) | Low |
+| 14 | Improve homepage visual consistency (REC-009) | Low |
+| 15 | Standardize blog post tag presentation (REC-013) | Low |

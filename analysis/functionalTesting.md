@@ -288,3 +288,16 @@ The following observations were recorded during manual desktop inspection and in
 - **Actual:** The password was successfully changed without entering the current password. After logging out, the old password no longer worked, while the new password successfully authenticated the account.
 - **Status:** FAIL
 - **Evidence:** `../screenshot/original/myProfile-fullpage-overview.png`
+
+---
+
+## Responsive Testing
+
+### TEST-027 — Homepage Horizontal Overflow
+
+- **Page:** Homepage
+- **Category:** Responsive Design / Layout
+- **Expected:** The homepage should remain within the viewport width without unintended horizontal scrolling.
+- **Actual:** At 375px and 768px viewport widths, the page can be manually scrolled horizontally towards the left while the hero section is visible, exposing a blank white area. The layout returns to its normal alignment when the "Get to Know Us Better" section begins. The 430px viewport was also inspected, but the issue was not separately confirmed.
+- **Status:** FAIL
+- **Evidence:** Manual responsive inspection; no screenshot captured.

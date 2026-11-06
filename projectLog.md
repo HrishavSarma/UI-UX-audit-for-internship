@@ -230,3 +230,13 @@ Require server-side current-password verification or equivalent recent reauthent
 
 ### Status
 Security weakness verified and documented. No implementation undertaken.
+
+06 November 2026 — Responsive Audit
+
+Record:
+- Main website pages inspected at 375px.
+- Additional homepage checks at 430px and 768px.
+- Existing desktop findings checked against mobile layouts.
+- RESP-001 and TEST-027 documented.
+- No screenshot evidence captured for this phase.
+- No website implementation undertaken.
